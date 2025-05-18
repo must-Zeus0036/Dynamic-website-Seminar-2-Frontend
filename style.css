@@ -1,0 +1,242 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: brown;
+    padding: 20px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo{
+    max-height: 90px;
+    margin-right: 10px;
+    border-radius: 5%;
+}
+/* Mobile-first navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+}
+
+nav ul li {
+    margin: 5px 0; /* Add vertical spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+.comment-user-image {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Add some space between the image and the text */
+    vertical-align: middle; /* Align the image with the text */
+}
+
+#goToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Navigation for larger screens */
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row; /* Display items horizontally on larger screens */
+        justify-content: center; /* Space items evenly */
+    }
+
+    nav ul li {
+        margin: 0 15px; /* Add horizontal spacing */
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+#feedback{
+    border-radius: 5px;
+
+}
+
+/* Posts Page Styles */
+.postsContainer {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post .username {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.post .tags {
+    margin-top: 10px;
+}
+
+.post .tags span {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.post .comments {
+    margin-top: 20px;
+}
+
+.comment {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.profile-card {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.profile-card-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    position: relative;
+}
+
+.close-profile-card {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contact Form Styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    max-width: 350px;
+    margin: auto;
+}
+
+.contact-form input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-form .error {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 10px;
+}
